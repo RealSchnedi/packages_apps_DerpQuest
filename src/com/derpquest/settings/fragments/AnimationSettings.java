@@ -16,34 +16,29 @@
 
 package com.derpquest.settings.fragments;
 
-import android.os.Bundle;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.os.Handler;
-import android.os.RemoteException;
-import android.os.ServiceManager;
-import android.os.SystemProperties;
-import android.os.UserHandle;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Color;
+import android.database.ContentObserver;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemProperties;
+import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.view.View;
 
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
@@ -51,23 +46,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class QuickSettings extends SettingsPreferenceFragment implements
+public class AnimationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.derpquest_settings_quicksettings);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        addPreferencesFromResource(R.xml.derpquest_settings_animations);
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.DERP;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        return false;
     }
 
     /**
@@ -83,7 +78,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                     ArrayList<SearchIndexableResource> result =
                             new ArrayList<SearchIndexableResource>();
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.derpquest_settings_quicksettings;
+                    sir.xmlResId = R.xml.derpquest_settings_animations;
                     result.add(sir);
                     return result;
                 }

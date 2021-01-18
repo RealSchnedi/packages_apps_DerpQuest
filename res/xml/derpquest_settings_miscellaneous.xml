@@ -15,6 +15,20 @@
      limitations under the License.
 -->
 
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/misc_title">
 
-</resources>
+    <PreferenceCategory
+        android:title="@string/dev_options_title">
+
+        <Preference
+            android:key="default_usb_configuration"
+            android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
+            android:title="@string/usb_default_config_title"
+            android:summary="@string/usb_default_config_summary"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
