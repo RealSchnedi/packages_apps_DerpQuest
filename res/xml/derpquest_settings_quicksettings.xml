@@ -28,6 +28,11 @@
         android:defaultValue="1" />
 
     <com.derp.support.preference.SystemSettingSwitchPreference
+        android:key="qs_tile_title_visibility"
+        android:title="@string/qs_tile_title_visibility_title"
+        android:defaultValue="true" />
+
+    <com.derp.support.preference.SystemSettingSwitchPreference
         android:key="qs_footer_text_show"
         android:title="@string/qs_footer_text_show_title"
         android:defaultValue="false" />
