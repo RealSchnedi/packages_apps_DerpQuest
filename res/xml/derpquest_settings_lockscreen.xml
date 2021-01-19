@@ -54,6 +54,12 @@
             android:summary="@string/fprint_sucess_vib_summary"
             android:persistent="false" />
 
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="fod_night_light"
+            android:title="@string/fod_night_light_title"
+            android:summary="@string/fod_night_light_summary"
+            android:defaultValue="@*android:bool/disable_fod_night_light"  />
+
     </PreferenceCategory>
 
     <PreferenceCategory

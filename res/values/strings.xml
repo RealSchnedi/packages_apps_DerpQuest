@@ -449,4 +449,8 @@
     <string name="hide_lockicon_title">Hide lock icon</string>
     <string name="hide_lockicon_summary">Hide the lock icon on lockscreen</string>
 
+    <!-- Nightlight Fod -->
+    <string name="fod_night_light_title">Disable night light when showing FOD</string>
+    <string name="fod_night_light_summary">Disable night light on lockscreen if FOD is active. Disabling this option might affect your fingerprint accuracy with night light on</string>
+
 </resources>
