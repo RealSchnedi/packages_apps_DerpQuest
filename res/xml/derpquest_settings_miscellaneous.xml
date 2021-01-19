@@ -20,6 +20,12 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/misc_title">
 
+    <Preference
+        android:key="pulse_category"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:fragment="com.derpquest.settings.fragments.PulseSettings" />
+
     <PreferenceCategory
         android:title="@string/dev_options_title">
 
