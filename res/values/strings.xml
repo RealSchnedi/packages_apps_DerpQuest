@@ -42,6 +42,7 @@
     <string name="system_settings_title">System options</string>
     <string name="torch_gestures_title">Torch gestures</string>
     <string name="volume_keys_title">Volume keys</string>
+    <string name="qs_footer_category_title">QS footer</string>
 
     <!-- Summaries -->
     <string name="aosp_gesture_summary">Stock gestures included with Android</string>
@@ -197,5 +198,9 @@
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
     <string name="qs_battery_percentage_title">QS battery percentage</string>
     <string name="qs_battery_percentage_summary">Show battery percentage in the QS header instead of battery estimate</string>
+
+    <!-- Running Services -->
+    <string name="qs_running_services_title">Running Services Icon</string>
+    <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
 
 </resources>
