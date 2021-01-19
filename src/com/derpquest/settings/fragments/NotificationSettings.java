@@ -46,7 +46,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.derp.support.colorpicker.ColorPickerPreference;
-import com.derp.support.preference.CustomSystemSeekBarPreference;
+import com.derp.support.preference.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,14 +58,14 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
     private static final String KEY_AMBIENT = "ambient_notification_light_enabled";
     private static final String NOTIFICATION_PULSE_COLOR = "ambient_notification_light_color";
-    private static final String AMBIENT_LIGHT_DURATION = "ambient_light_duration";
-    private static final String AMBIENT_LIGHT_REPEAT_COUNT = "ambient_light_repeat_count";
+    private static final String NOTIFICATION_PULSE_DURATION = "notification_pulse_duration";
+    private static final String NOTIFICATION_PULSE_REPEATS = "notification_pulse_repeats";
     private static final String PULSE_COLOR_MODE_PREF = "ambient_notification_light_color_mode";
 
     private SystemSettingSwitchPreference mAmbientPref;
     private ColorPickerPreference mEdgeLightColorPreference;
-    private CustomSystemSeekBarPreference mEdgeLightDurationPreference;
-    private CustomSystemSeekBarPreference mEdgeLightRepeatCountPreference;
+    private CustomSeekBarPreference mEdgeLightDurationPreference;
+    private CustomSeekBarPreference mEdgeLightRepeatCountPreference;
     private ListPreference mColorMode;
 
     @Override
@@ -89,16 +89,16 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
             mAmbientPref.setSummary(R.string.aod_disabled);
         }
 
-        mEdgeLightRepeatCountPreference = (CustomSystemSeekBarPreference) findPreference(AMBIENT_LIGHT_REPEAT_COUNT);
+        mEdgeLightRepeatCountPreference = (CustomSeekBarPreference) findPreference(NOTIFICATION_PULSE_REPEATS);
         mEdgeLightRepeatCountPreference.setOnPreferenceChangeListener(this);
         int repeats = Settings.System.getInt(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_REPEAT_COUNT, 0);
+                Settings.System.NOTIFICATION_PULSE_REPEATS, 0);
         mEdgeLightRepeatCountPreference.setValue(repeats);
 
-        mEdgeLightDurationPreference = (CustomSystemSeekBarPreference) findPreference(AMBIENT_LIGHT_DURATION);
+        mEdgeLightDurationPreference = (CustomSeekBarPreference) findPreference(NOTIFICATION_PULSE_DURATION);
         mEdgeLightDurationPreference.setOnPreferenceChangeListener(this);
         int duration = Settings.System.getInt(getContentResolver(),
-                Settings.System.AMBIENT_LIGHT_DURATION, 2);
+                Settings.System.NOTIFICATION_PULSE_DURATION, 2);
         mEdgeLightDurationPreference.setValue(duration);
 
         mColorMode = (ListPreference) findPreference(PULSE_COLOR_MODE_PREF);
@@ -133,7 +133,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         mEdgeLightColorPreference.setOnPreferenceChangeListener(this);
     }
 
-    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mEdgeLightColorPreference) {
             String hex = ColorPickerPreference.convertToARGB(
@@ -150,12 +149,12 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         } else if (preference == mEdgeLightRepeatCountPreference) {
                 int value = (Integer) newValue;
                 Settings.System.putInt(getContentResolver(),
-                        Settings.System.AMBIENT_LIGHT_REPEAT_COUNT, value);
+                        Settings.System.NOTIFICATION_PULSE_REPEATS, value);
                 return true;
         } else if (preference == mEdgeLightDurationPreference) {
             int value = (Integer) newValue;
                 Settings.System.putInt(getContentResolver(),
-                    Settings.System.AMBIENT_LIGHT_DURATION, value);
+                    Settings.System.NOTIFICATION_PULSE_DURATION, value);
             return true;
         } else if (preference == mColorMode) {
              int value = Integer.valueOf((String) newValue);
