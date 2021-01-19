@@ -54,8 +54,10 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String LAYOUT_SETTINGS = "navbar_layout_views";
+    private static final String NAVIGATION_BAR_INVERSE = "navbar_inverse_layout";
 
     private Preference mLayoutSettings;
+    private SwitchPreference mSwapNavButtons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,7 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
+        mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
 
         if (!derpUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             prefScreen.removePreference(mLayoutSettings);
