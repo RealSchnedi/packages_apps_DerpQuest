@@ -35,6 +35,13 @@
     <PreferenceCategory
         android:title="@string/lockscreen_fingerprint_category">
 
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="fod_gesture"
+            android:title="@string/fod_gesture_title"
+            android:summary="@string/fod_gesture_summary"
+            android:defaultValue="false"
+            settings:controller="com.android.settings.security.screenlock.ScreenOffFodPreferenceController" />
+
         <SwitchPreference
             android:key="fingerprint_success_vib"
             android:title="@string/fprint_sucess_vib_title"
