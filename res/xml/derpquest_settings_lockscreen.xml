@@ -33,6 +33,17 @@
         android:defaultValue="true" />
 
     <PreferenceCategory
+        android:title="@string/lockscreen_fingerprint_category">
+
+        <SwitchPreference
+            android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="lock_clock_fonts"
         android:title="@string/lock_clock_font_title">
 
