@@ -38,6 +38,12 @@
         android:summary="@string/hide_lockicon_summary"
         android:defaultValue="true" />
 
+    <com.derp.support.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_status_bar"
+        android:title="@string/lockscreen_status_bar_title"
+        android:summary="@string/lockscreen_status_bar_summary"
+        android:defaultValue="true" />
+
     <PreferenceCategory
         android:title="@string/lockscreen_fingerprint_category">
 
