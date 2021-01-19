@@ -32,4 +32,10 @@
         android:summary="@string/smart_space_summary"
         android:defaultValue="true" />
 
+    <com.derp.support.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_media_metadata"
+        android:title="@string/lockscreen_media_art_title"
+        android:summary="@string/lockscreen_media_art_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
