@@ -40,6 +40,7 @@
     <string name="statusbar_network_icons_title">Status bar network icons</string>
     <string name="swipe_gestures_title">Swipe gestures</string>
     <string name="system_settings_title">System options</string>
+    <string name="themes_title">Themes</string>
     <string name="torch_gestures_title">Torch gestures</string>
     <string name="volume_keys_title">Volume keys</string>
     <string name="qs_footer_category_title">QS footer</string>
@@ -55,6 +56,7 @@
     <string name="notifications_summary">Manage your notification settings</string>
     <string name="powermenu_summary">Configure your shutdown options</string>
     <string name="quicksettings_summary">Modify the QS panel layout and more</string>
+    <string name="themes_summary">Pimp your device with our theme options</string>
     <string name="statusbar_summary">Personalize your status bar items</string>
 
     <!-- General strings -->
@@ -341,5 +343,8 @@
     <!-- Advanced reboot -->
     <string name="powermenu_advanced_reboot_title">Advanced reboot</string>
     <string name="powermenu_advanced_reboot_summary">Enables access to recovery and bootloader</string>
+
+    <!-- Themes -->
+    <string name="theme_customization_category">Theming</string>
 
 </resources>
