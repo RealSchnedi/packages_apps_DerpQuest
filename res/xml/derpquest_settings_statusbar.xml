@@ -23,8 +23,8 @@
     <Preference
         android:title="@string/statusbar_items_title" >
         <intent android:action="android.intent.action.MAIN"
-            android:targetPackage="com.android.systemui"
-            android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
+        android:targetPackage="com.android.systemui"
+        android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
     <Preference
@@ -32,6 +32,12 @@
         android:title="@string/battery_percent_title"
         android:summary="@string/battery_percent_summary"
         android:fragment="com.derpquest.settings.fragments.StatusbarBatterySettings"/>
+
+    <Preference
+        android:key="battery_bar_settings"
+        android:title="@string/battery_bar_title"
+        android:summary="@string/battery_bar_summary" 
+        android:fragment="com.derpquest.settings.fragments.BatteryBarSettings"/>
 
     <com.derp.support.preference.SystemSettingSwitchPreference
         android:key="show_fourg"
