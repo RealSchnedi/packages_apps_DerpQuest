@@ -150,8 +150,11 @@
     <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
 
     <!-- Lock screen cover art -->
-    <string name="lockscreen_media_art_title">Mediencover anzeigen</string>
-    <string name="lockscreen_media_art_summary">Zeigen Sie das Albumcover des aktuell wiedergegebenen Mediums auf dem Sperrbildschirm an</string>
+    <string name="lockscreen_media_art_title">Lockscreen media art</string>
+    <string name="lockscreen_media_art_summary">Display media cover art when playing music</string>
+    <string name="lockscreen_media_blur_title">Media art blur level</string>
+    <string name="show_lockscreen_media_art_title">Show media art</string>
+    <string name="lockscreen_media_art_options_title">Lockscreen media art</string>
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navbar buttons</string>
