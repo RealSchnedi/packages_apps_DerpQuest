@@ -40,6 +40,7 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.derp.derpUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -52,10 +53,22 @@ import java.util.List;
 public class NavigationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String LAYOUT_SETTINGS = "navbar_layout_views";
+
+    private Preference mLayoutSettings;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_navigation);
+
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
+
+        if (!derpUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+            prefScreen.removePreference(mLayoutSettings);
+        }
     }
 
     @Override
@@ -65,7 +78,7 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.EVOLVER;
+        return MetricsEvent.DERP;
     }
 
     /**
