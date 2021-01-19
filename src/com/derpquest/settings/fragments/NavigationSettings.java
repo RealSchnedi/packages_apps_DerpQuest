@@ -55,9 +55,11 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
     private static final String LAYOUT_SETTINGS = "navbar_layout_views";
     private static final String NAVIGATION_BAR_INVERSE = "navbar_inverse_layout";
+    private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
 
     private Preference mLayoutSettings;
     private SwitchPreference mSwapNavButtons;
+    private SwitchPreference mPixelNavAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,7 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        mPixelNavAnimation = (SwitchPreference) findPreference(PIXEL_NAV_ANIMATION);
         mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
         mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
 
