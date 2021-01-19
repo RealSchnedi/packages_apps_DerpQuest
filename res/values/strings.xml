@@ -435,4 +435,9 @@
     <string name="qs_show_brightness_slider_show_expanded">Show when expanded</string>
     <string name="qs_show_brightness_slider_show_always">Show always</string>
 
+    <!-- QS tiles -->
+    <string name="qs_tiles_category">Tiles</string>
+    <string name="qs_bg_use_new_tint">Tint QS tiles using accent color</string>
+    <string name="qs_bg_use_new_tint_summary">Enable the accent color tint on the QS tiles</string>
+
 </resources>
