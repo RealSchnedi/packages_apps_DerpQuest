@@ -457,4 +457,8 @@
     <string name="lockscreen_status_bar_title">Status bar</string>
     <string name="lockscreen_status_bar_summary">Display status bar on the lockscreen</string>
 
+    <!-- Transparent lockscreen notifications -->
+    <string name="transparent_lockscreen_notification_title">Transparent notifications</string>
+    <string name="transparent_lockscreen_notification_summary">Enable lockscreen notifications with semi-transparent backgrounds</string>
+
 </resources>
