@@ -368,4 +368,55 @@
         <item>space;space;left,back,home,recent,right</item>
     </string-array>
 
+    <!-- QS Tile Styles -->
+    <string-array name="qs_tile_style_entries" translatable="false">
+        <item>@string/qstile_default</item>
+        <item>@string/qstile_trim</item>
+        <item>@string/qstile_dual_tone</item>
+        <item>@string/qstile_dual_tone_trim</item>
+        <item>@string/qstile_cookie</item>
+        <item>@string/qstile_justicons</item>
+        <item>@string/qstile_inkdrop</item>
+        <item>@string/qstile_shishu_nights</item>
+        <item>@string/qstile_mono_gradient</item>
+        <item>@string/qstile_wavey</item>
+        <item>@string/qstile_memedo_square</item>
+        <item>@string/qstile_ninja</item>
+        <item>@string/qstile_dottedcircle</item>
+        <item>@string/qstile_shishuink</item>
+        <item>@string/qstile_attemptmountain</item>
+        <item>@string/qstile_neonlike</item>
+        <item>@string/qstile_oos</item>
+        <item>@string/qstile_triangles</item>
+        <item>@string/qstile_divided</item>
+        <item>@string/qstile_cosmos</item>
+        <item>@string/qstile_gradient</item>
+        <item>@string/qstile_pureaccent</item>
+    </string-array>
+
+    <string-array name="qs_tile_style_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+    </string-array>
+
 </resources>
