@@ -26,6 +26,12 @@
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="false" />
 
+    <Preference
+        android:key="charging_light"
+        android:title="@string/battery_light_settings"
+        android:summary="@string/battery_light_summary"
+        android:fragment="com.derpquest.settings.fragments.BatteryLightSettings" />
+
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >

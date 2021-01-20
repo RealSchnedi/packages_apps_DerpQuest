@@ -58,6 +58,7 @@ import java.util.List;
 public class NotificationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_CHARGING_LIGHT = "charging_light";
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
     private static final String KEY_AMBIENT = "ambient_notification_light_enabled";
     private static final String NOTIFICATION_PULSE_COLOR = "ambient_notification_light_color";
@@ -65,6 +66,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
     private static final String NOTIFICATION_PULSE_REPEATS = "notification_pulse_repeats";
     private static final String PULSE_COLOR_MODE_PREF = "ambient_notification_light_color_mode";
 
+    private Preference mChargingLeds;
     private SystemSettingSwitchPreference mAmbientPref;
     private ColorPickerPreference mEdgeLightColorPreference;
     private CustomSeekBarPreference mEdgeLightDurationPreference;
@@ -81,6 +83,13 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
         if (!Utils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(incallVibCategory);
+        }
+
+        mChargingLeds = findPreference(KEY_CHARGING_LIGHT);
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            prefScreen.removePreference(mChargingLeds);
         }
 
         mAmbientPref = (SystemSettingSwitchPreference) findPreference(KEY_AMBIENT);
