@@ -27,6 +27,13 @@
             android:targetClass="com.android.systemui.tuner.NavBarActivity" />
     </Preference> -->
 
+    <Preference
+        android:key="system_navigation_settings_preferences"
+        android:title="@string/navbar_gestures_title"
+        android:summary="@string/navbar_gestures_summary"
+        android:fragment="com.android.settings.gestures.SystemNavigationGestureSettings"
+        settings:controller="com.android.settings.gestures.SystemNavigationPreferenceController" />
+
     <com.derp.support.preference.SecureSettingListPreference
         android:key="navbar_layout_views"
         android:title="@string/navbar_layout_title"
