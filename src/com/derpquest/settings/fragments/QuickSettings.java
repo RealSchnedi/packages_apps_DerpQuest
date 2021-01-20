@@ -48,6 +48,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.derp.support.preference.SystemSettingEditTextPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 

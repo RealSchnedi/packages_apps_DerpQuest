@@ -18,5 +18,5 @@
 <resources>
     <color name="switchBarBackgroundActivatedColor">@*android:color/accent_device_default_light</color>
 
-    <color name="evolution_icon_tint_color">@*android:color/accent_device_default_light</color>
+    <color name="derpquest_icon_tint_color">@*android:color/accent_device_default_light</color>
 </resources>

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.derpquest.settings.fragments.statusbar;
+package com.derpquest.settings.fragments;
 
 import android.app.AlertDialog;
 import android.content.ContentResolver;
@@ -55,7 +55,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable
-public class BatteryBar extends SettingsPreferenceFragment implements
+public class BatteryBarSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener, Indexable {
 
     private static final String PREF_BATT_BAR = "battery_bar_list";

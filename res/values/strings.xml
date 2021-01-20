@@ -187,6 +187,8 @@
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
 
     <!-- Battery Styles -->
+    <string name="battery_percent_title">Statusbar battery indicator</string>
+    <string name="battery_percent_summary">Configure icon and text styles for the statusbar battery indicator</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
     <string name="status_bar_battery_style_circle">Circle</string>
@@ -304,7 +306,7 @@
 
     <!-- Ambient edge lighting -->
     <string name="pulse_ambient_light_category">Screen edge lighting</string>
-    <string name="pulse_ambient_light_title">Show on new notifcation</string>
+    <string name="pulse_ambient_light_title">Show on new notification</string>
     <string name="pulse_ambient_light_summary">Show light pulse on new notification</string>
     <string name="ambient_notification_light_enabled_title">Show on always on</string>
     <string name="aod_disabled">AOD is disabled</string>
@@ -493,5 +495,13 @@
     <string name="clock_date_right">Right of time</string>
     <string name="clock_date_left">Left of time</string>
     <string name="clock_date_position">Date position</string>
+
+    <!-- USB configuration -->
+    <string name="usb_default_config_title">USB configuration</string>
+    <string name="usb_default_config_summary">Choose the default behavior when connected to a device via USB</string>
+
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_title">SystemUI restart required</string>
+    <string name="systemui_restart_message">For all changes to take effect, a SystemUI restart is required. Restart SystemUI now?</string>
 
 </resources>

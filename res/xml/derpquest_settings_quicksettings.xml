@@ -33,7 +33,7 @@
         android:defaultValue="true" />
 
     <PreferenceCategory
-        android:title="@string/brightness_control_category" >
+        android:title="@string/qs_show_brightness_slider_title" >
 
         <com.derp.support.preference.SecureSettingListPreference
             android:key="qs_show_brightness_slider"

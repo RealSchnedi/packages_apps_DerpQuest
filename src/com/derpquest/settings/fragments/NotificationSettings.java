@@ -47,6 +47,9 @@ import com.android.settingslib.search.SearchIndexable;
 
 import com.derp.support.colorpicker.ColorPickerPreference;
 import com.derp.support.preference.CustomSeekBarPreference;
+import com.derp.support.preference.SystemSettingSwitchPreference;
+
+import com.derpquest.settings.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

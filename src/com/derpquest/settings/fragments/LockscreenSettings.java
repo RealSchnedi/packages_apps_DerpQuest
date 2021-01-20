@@ -62,6 +62,7 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_lockscreen);
+        PreferenceScreen prefScreen = getPreferenceScreen();
 
         mLockClockFonts = (ListPreference) findPreference(LOCK_CLOCK_FONT_STYLE);
         mLockClockFonts.setValue(String.valueOf(Settings.System.getInt(
