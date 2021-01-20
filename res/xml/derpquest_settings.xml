@@ -52,13 +52,13 @@
         android:fragment="com.derpquest.settings.fragments.QuickSettings"
         android:icon="@drawable/ic_settings_quicksettings" />
 
-    <!-- Power Menu -->
+    <!-- Lock Screen -->
     <Preference
-        android:key="powermenu_category"
-        android:title="@string/powermenu_title"
-        android:summary="@string/powermenu_summary"
-        android:fragment="com.derpquest.settings.fragments.PowerMenuSettings"
-        android:icon="@drawable/ic_settings_powermenu" />
+        android:key="lockscreen_category"
+        android:title="@string/lockscreen_title"
+        android:summary="@string/lockscreen_summary"
+        android:fragment="com.derpquest.settings.fragments.LockscreenSettings"
+        android:icon="@drawable/ic_settings_lockscreen" />
 
     <!-- Gestures -->
     <Preference
@@ -68,14 +68,6 @@
         android:fragment="com.derpquest.settings.fragments.GesturesSettings"
         android:icon="@drawable/ic_settings_gestures" />
 
-    <!-- Lock Screen -->
-    <Preference
-        android:key="lockscreen_category"
-        android:title="@string/lockscreen_title"
-        android:summary="@string/lockscreen_summary"
-        android:fragment="com.derpquest.settings.fragments.LockscreenSettings"
-        android:icon="@drawable/ic_settings_lockscreen" />
-
     <!-- Navigation -->
     <Preference
         android:key="navigation_category"
@@ -83,6 +75,14 @@
         android:summary="@string/navigation_summary"
         android:fragment="com.derpquest.settings.fragments.NavigationSettings"
         android:icon="@drawable/ic_settings_navigation" />
+
+    <!-- Power Menu -->
+    <Preference
+        android:key="powermenu_category"
+        android:title="@string/powermenu_title"
+        android:summary="@string/powermenu_summary"
+        android:fragment="com.derpquest.settings.fragments.PowerMenuSettings"
+        android:icon="@drawable/ic_settings_powermenu" />
 
     <!-- Animations -->
     <Preference
@@ -99,5 +99,13 @@
         android:summary="@string/misc_summary"
         android:fragment="com.derpquest.settings.fragments.MiscellaneousSettings"
         android:icon="@drawable/ic_settings_miscellaneous" />
+
+    <!-- Volume -->
+    <Preference
+        android:key="volume_category"
+        android:title="@string/volume_title"
+        android:summary="@string/volume_summary"
+        android:fragment="com.derpquest.settings.fragments.VolumeSettings"
+        android:icon="@drawable/ic_settings_volume" />
 
 </PreferenceScreen>
