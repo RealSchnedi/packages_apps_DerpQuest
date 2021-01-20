@@ -65,6 +65,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
     private static final String NOTIFICATION_PULSE_DURATION = "notification_pulse_duration";
     private static final String NOTIFICATION_PULSE_REPEATS = "notification_pulse_repeats";
     private static final String PULSE_COLOR_MODE_PREF = "ambient_notification_light_color_mode";
+    private static final String NOTIFICATION_HEADERS = "notification_headers";
 
     private Preference mChargingLeds;
     private SystemSettingSwitchPreference mAmbientPref;
@@ -72,13 +73,14 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mEdgeLightDurationPreference;
     private CustomSeekBarPreference mEdgeLightRepeatCountPreference;
     private ListPreference mColorMode;
+    private SystemSettingSwitchPreference mNotificationHeader;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_notifications);
         PreferenceScreen prefScreen = getPreferenceScreen();
-        final ContentResolver resolver = getActivity().getContentResolver();
+        ContentResolver resolver = getActivity().getContentResolver();
 
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
         if (!Utils.isVoiceCapable(getActivity())) {
@@ -143,9 +145,15 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
             mEdgeLightColorPreference.setSummary(edgeLightColorHex);
         }
         mEdgeLightColorPreference.setOnPreferenceChangeListener(this);
+
+        mNotificationHeader = findPreference(NOTIFICATION_HEADERS);
+        mNotificationHeader.setChecked((Settings.System.getInt(resolver,
+                Settings.System.NOTIFICATION_HEADERS, 1) == 1));
+        mNotificationHeader.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mEdgeLightColorPreference) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
@@ -187,7 +195,11 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
                         Settings.System.NOTIFICATION_PULSE_COLOR_AUTOMATIC, 0);
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.NOTIFICATION_PULSE_ACCENT, 0);
-            }
+            } else if (preference == mNotificationHeader) {
+            boolean value = (Boolean) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
+                derpUtils.showSystemUiRestartDialog(getContext());
             return true;
         }
         return false;
