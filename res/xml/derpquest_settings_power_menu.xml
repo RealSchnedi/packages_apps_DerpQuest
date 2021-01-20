@@ -26,4 +26,10 @@
         android:summary="@string/powermenu_advanced_reboot_summary"
         android:defaultValue="false" />
 
+    <com.derp.support.preference.SecureSettingSwitchPreference
+        android:key="power_menu_hide_on_secure"
+        android:title="@string/power_menu_hide_on_secure_title"
+        android:summary="@string/power_menu_hide_on_secure_summary"
+        android:defaultValue="false" />
+
 </PreferenceScreen>
