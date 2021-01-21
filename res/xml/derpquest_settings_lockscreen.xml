@@ -72,6 +72,12 @@
             android:summary="@string/fod_night_light_summary"
             android:defaultValue="@*android:bool/disable_fod_night_light"  />
 
+        <Preference
+            android:key="fod_icon_picker_category"
+            android:title="@string/fod_icon_picker_title"
+            android:summary="@string/fod_icon_picker_summary"
+            android:fragment="com.derpquest.settings.fragments.FODIconPickerFragment" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
