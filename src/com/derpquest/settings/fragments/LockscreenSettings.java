@@ -37,6 +37,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+import com.android.internal.util.derp.fod.FodUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -52,11 +53,13 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
     private static final String LOCK_CLOCK_FONT_STYLE = "lock_clock_font_style";
     private static final String LOCK_DATE_FONTS = "lock_date_fonts";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker";
 
     private ListPreference mLockClockFonts;
     private ListPreference mLockDateFonts;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private PreferenceCategory mFODIconPickerCategory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,6 +87,11 @@ public class LockscreenSettings extends SettingsPreferenceFragment implements
             mFingerprintVib.setChecked((Settings.System.getInt(getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
+        }
+
+        mFODIconPickerCategory = findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPickerCategory != null && !FodUtils.hasFodSupport(getContext())) {
+            prefScreen.removePreference(mFODIconPickerCategory);
         }
     }
 

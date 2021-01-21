@@ -78,6 +78,12 @@
             android:summary="@string/fod_icon_picker_summary"
             android:fragment="com.derpquest.settings.fragments.FODIconPickerFragment" />
 
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="fod_recognizing_animation"
+            android:title="@string/fod_recog_animation"
+            android:summary="@string/fod_recog_animation_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
