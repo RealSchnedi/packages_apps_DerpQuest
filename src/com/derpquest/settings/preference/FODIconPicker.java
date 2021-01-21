@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.derpquest.settings;
+package com.derpquest.settings.preference;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
