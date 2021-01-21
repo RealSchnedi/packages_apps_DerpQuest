@@ -58,6 +58,7 @@
     <string name="quicksettings_summary">Modify the QS panel layout and more</string>
     <string name="themes_summary">Pimp your device with our theme options</string>
     <string name="statusbar_summary">Personalize your status bar items</string>
+    <string name="volume_summary">Take control of your volume keys</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -141,6 +142,11 @@
 
     <!-- Statusbar Tuner -->
     <string name="statusbar_items_title">Statusbar items</string>
+
+    <!-- Status bar - icons -->
+    <string name="status_bar_icons_title">Status bar icons</string>
+    <string name="status_bar_system_icons_title">System icons</string>
+    <string name="status_bar_system_icons_summary">Control which status bar icons are shown</string>
 
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">In-call vibration options</string>
@@ -570,5 +576,9 @@
     <!-- Notification headers -->
     <string name="notification_headers_title">Notification headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade</string>
+
+    <!-- Navbar Entries -->
+    <string name="navbar_gestures_title">Navigation gesture options</string>
+    <string name="navbar_gestures_summary">Choose buttons or gestures to navigate your device</string>
 
 </resources>

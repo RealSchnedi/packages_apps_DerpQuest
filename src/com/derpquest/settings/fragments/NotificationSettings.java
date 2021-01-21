@@ -154,7 +154,13 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mEdgeLightColorPreference) {
+        if (preference == mNotificationHeader) {
+            boolean value = (Boolean) newValue;
+                Settings.System.putInt(resolver,
+                        Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
+                Utils.showSystemUiRestartDialog(getContext());
+            return true;
+        } else if (preference == mEdgeLightColorPreference) {
             String hex = ColorPickerPreference.convertToARGB(
                     Integer.valueOf(String.valueOf(newValue)));
             if (hex.equals("#ff3980ff")) {
@@ -195,11 +201,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
                         Settings.System.NOTIFICATION_PULSE_COLOR_AUTOMATIC, 0);
                 Settings.System.putInt(getContentResolver(),
                         Settings.System.NOTIFICATION_PULSE_ACCENT, 0);
-            } else if (preference == mNotificationHeader) {
-            boolean value = (Boolean) newValue;
-                Settings.System.putInt(resolver,
-                        Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
-                derpUtils.showSystemUiRestartDialog(getContext());
+            }
             return true;
         }
         return false;
