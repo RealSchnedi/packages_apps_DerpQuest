@@ -620,4 +620,7 @@
     <string name="fod_pressed_color_green">Green</string>
     <string name="fod_pressed_color_yellow">Yellow</string>
 
+    <!-- Accent color picker -->
+    <string name="accent_color_title">Accent color picker</string>
+
 </resources>
