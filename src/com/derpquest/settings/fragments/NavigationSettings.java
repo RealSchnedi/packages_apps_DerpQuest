@@ -73,7 +73,9 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
         mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
 
         if (!derpUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+            prefScreen.removePreference(mPixelNavAnimation);
             prefScreen.removePreference(mLayoutSettings);
+            prefScreen.removePreference(mSwapNavButtons);
         }
     }
 
