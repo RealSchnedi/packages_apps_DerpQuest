@@ -77,7 +77,7 @@ public class QsCustomHeaderSettings extends SettingsPreferenceFragment implement
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.evolution_settings_custom_headers);
+        addPreferencesFromResource(R.xml.derpquest_settings_custom_headers);
 
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
@@ -251,7 +251,7 @@ public class QsCustomHeaderSettings extends SettingsPreferenceFragment implement
                     ArrayList<SearchIndexableResource> result =
                             new ArrayList<SearchIndexableResource>();
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.evolution_settings_custom_headers;
+                    sir.xmlResId = R.xml.derpquest_settings_custom_headers;
                     result.add(sir);
                     return result;
                 }
