@@ -36,6 +36,8 @@ import com.android.settingslib.core.AbstractPreferenceController;
 import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.derpquest.settings.display.AccentColorPreferenceController;
+
 import java.util.ArrayList;
 import java.util.List;
 

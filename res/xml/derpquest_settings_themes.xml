@@ -29,15 +29,6 @@
         settings:controller="com.android.settings.display.DarkUIPreferenceController"
         settings:keywords="@string/keywords_dark_ui_mode"/>
 
-    <Preference
-        android:key="clock_style"
-        android:title="@string/clock_style_title"
-        android:summary="@string/clock_style_summary">
-        <intent android:action="android.intent.action.VIEW"
-                android:targetPackage="com.android.wallpaper"
-                android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
-    </Preference>
-
     <com.derp.support.colorpicker.ColorPickerPreference
         android:key="accent_color"
         android:title="@string/accent_color_title"
