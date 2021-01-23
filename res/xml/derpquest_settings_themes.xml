@@ -67,6 +67,12 @@
     <PreferenceCategory
         android:title="@string/quicksettings_title" >
 
+        <Preference
+            android:key="custom_header"
+            android:fragment="com.derpquest.settings.fragments.QsCustomHeaderSettings"
+            android:title="@string/custom_header_title"
+            android:summary="@string/custom_header_summary" />
+
         <com.derp.support.preference.SystemSettingListPreference
             android:key="qs_tile_style"
             android:title="@string/qs_tile_style_title"
