@@ -20,45 +20,29 @@
     <string name="derpquest_title">DerpQuest</string>
     <string name="derp_title">DerpFest Settings</string>
 
-    <!-- Categories -->
-    <string name="aosp_gesture_title">AOSP Gestures</string>
+    <!-- Categories and Summaries -->
     <string name="animation_title">Animations</string>
-    <string name="buttons_title">Hardware buttons</string>
-    <string name="dev_options_title">Developer options items</string>
+    <string name="animation_summary">System animations, qs tile animations</string>
     <string name="gestures_title">Gestures</string>
-    <string name="hardware_keys_title">Hardware keys</string>
+    <string name="gestures_summary">Jump to camera, swipe to screenshot</string>
     <string name="lockscreen_title">Lock screen</string>
+    <string name="lockscreen_summary">Fingerprint animation, charging info</string>
     <string name="misc_title">Miscellaneous</string>
+    <string name="misc_summary">Gaming mode, charging animation</string>
     <string name="navigation_title">Navigation</string>
+    <string name="navigation_summary">System gestures, navigation bar</string>
     <string name="notifications_title">Notifications</string>
-    <string name="powermenu_title">Power menu</string>
-    <string name="powermenu_items_title">Power menu items</string>
+    <string name="notifications_summary">Edge lighting, heads-up</string>
+    <string name="powermenu_title">Power</string>
+    <string name="powermenu_summary">Advanced reboot, hide on lockscreen</string>
     <string name="quicksettings_title">Quick settings</string>
+    <string name="quicksettings_summary">Tile layout, header image, background blur</string>
     <string name="statusbar_title">Status bar</string>
-    <string name="statusbar_icons_title">Status bar icons</string>
-    <string name="statusbar_items_categories_title">Status bar items categories</string>
-    <string name="statusbar_network_icons_title">Status bar network icons</string>
-    <string name="swipe_gestures_title">Swipe gestures</string>
-    <string name="system_settings_title">System options</string>
+    <string name="statusbar_summary">Clock, logo, status icons</string>
     <string name="themes_title">Themes</string>
-    <string name="torch_gestures_title">Torch gestures</string>
-    <string name="volume_keys_title">Volume keys</string>
-    <string name="qs_footer_category_title">QS footer</string>
-
-    <!-- Summaries -->
-    <string name="aosp_gesture_summary">Stock gestures included with Android</string>
-    <string name="animation_summary">Change the animation styles</string>
-    <string name="buttons_summary">Tweak the actions of your physical buttons</string>
-    <string name="gestures_summary">Gesture based options/actions</string>
-    <string name="lockscreen_summary">Take control of your lockscreen items</string>
-    <string name="misc_summary">Gaming mode and other system settings</string>
-    <string name="navigation_summary">Customize navigation bar style and behavior</string>
-    <string name="notifications_summary">Manage your notification settings</string>
-    <string name="powermenu_summary">Configure your shutdown options</string>
-    <string name="quicksettings_summary">Modify the QS panel layout and more</string>
-    <string name="themes_summary">Pimp your device with our theme options</string>
-    <string name="statusbar_summary">Personalize your status bar items</string>
-    <string name="volume_summary">Take control of your volume keys</string>
+    <string name="themes_summary">Accent picker, dark theme</string>
+    <string name="volume_keys_title">Volume</string>
+    <string name="volume_summary">Control music, swap buttons</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -85,6 +69,7 @@
     <!-- ##### ##### ##### ##### ##### -->
 
     <!-- QS footer text -->
+    <string name="qs_footer_category_title">QS footer</string>
     <string name="qs_footer_text_show_title">Show QS footer text</string>
     <string name="qs_footer_text_string_title">Customize footer text</string>
 
