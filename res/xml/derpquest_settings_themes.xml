@@ -88,6 +88,20 @@
             android:summary="@string/qs_bg_use_new_tint_summary"
             android:defaultValue="false" />
 
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="qs_tiles_bg_disco"
+            android:title="@string/qs_bg_use_disco"
+            android:summary="@string/qs_bg_use_disco_summary"
+            android:defaultValue="false" />
+
+        <com.derp.support.preference.CustomSystemSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_alpha_title"
+            android:defaultValue="255"
+            android:max="255"
+            android:min="0"
+            settings:units="" />
+
         <com.derp.support.preference.CustomSystemSeekBarPreference
             android:key="qs_sb_bg_alpha"
             android:title="@string/qs_sb_bg_alpha_title"
@@ -101,14 +115,6 @@
             android:title="@string/qs_panel_gradient_title"
             android:summary="@string/qs_panel_gradient_summary"
             android:defaultValue="true" />
-
-        <com.derp.support.preference.CustomSystemSeekBarPreference
-            android:key="qs_panel_bg_alpha"
-            android:title="@string/qs_panel_alpha_title"
-            android:defaultValue="255"
-            android:max="255"
-            android:min="0"
-            settings:units="" />
 
     </PreferenceCategory>
 
