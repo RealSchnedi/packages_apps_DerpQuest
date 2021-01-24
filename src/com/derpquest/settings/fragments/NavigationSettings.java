@@ -46,6 +46,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.derp.support.preference.SystemSettingSwitchPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,23 +61,22 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
     private Preference mLayoutSettings;
     private SwitchPreference mSwapNavButtons;
-    private SwitchPreference mPixelNavAnimation;
+    private SystemSettingSwitchPreference mPixelNavAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_navigation);
-
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mPixelNavAnimation = (SwitchPreference) findPreference(PIXEL_NAV_ANIMATION);
-        mLayoutSettings = (Preference) findPreference(LAYOUT_SETTINGS);
-        mSwapNavButtons = (SwitchPreference) findPreference(NAVIGATION_BAR_INVERSE);
+        mLayoutSettings = findPreference(LAYOUT_SETTINGS);
+        mSwapNavButtons = findPreference(NAVIGATION_BAR_INVERSE);
+        mPixelNavAnimation = findPreference(PIXEL_NAV_ANIMATION);
 
         if (!derpUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
-            prefScreen.removePreference(mPixelNavAnimation);
             prefScreen.removePreference(mLayoutSettings);
             prefScreen.removePreference(mSwapNavButtons);
+            prefScreen.removePreference(mPixelNavAnimation);
         }
     }
 
