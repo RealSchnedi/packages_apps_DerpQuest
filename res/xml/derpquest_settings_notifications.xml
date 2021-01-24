@@ -26,12 +26,6 @@
         android:summary="@string/notification_headers_summary"
         android:defaultValue="true" />
 
-    <com.derp.support.preference.SystemSettingSwitchPreference
-        android:key="less_boring_heads_up"
-        android:title="@string/less_boring_heads_up_title"
-        android:summary="@string/less_boring_heads_up_summary"
-        android:defaultValue="false" />
-
     <Preference
         android:key="charging_light"
         android:title="@string/battery_light_settings"
