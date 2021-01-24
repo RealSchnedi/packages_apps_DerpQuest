@@ -722,4 +722,8 @@
     <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
     <string name="lockscreen_qs_disabled_summary">Disable expanding quick settings on secure lock screens</string>
 
+    <!-- Notification Vibration -->
+    <string name="vibrate_on_notifications_title">Vibrate on notifications</string>
+    <string name="vibrate_on_notifications_summary">Disable notification vibration</string>
+
 </resources>
