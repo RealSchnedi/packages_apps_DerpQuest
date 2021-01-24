@@ -710,4 +710,8 @@
     <string name="notification_guts_kill_app_button_title">Kill app button</string>
     <string name="notification_guts_kill_app_button_summary">Show a kill app button in the notification\'s longpress menu</string>
 
+    <!-- Screenshot -->
+    <string name="global_actions_screenshot_title">Screenshot</string>
+    <string name="global_actions_screenshot_summary">Add Screenshot toggle to Power Menu</string>
+
 </resources>
