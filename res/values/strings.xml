@@ -718,4 +718,8 @@
     <string name="global_actions_screenrecord_title">Screen Record</string>
     <string name="global_actions_screenrecord_summary">Add Screen Record toggle to Power Menu</string>
 
+    <!-- Quick Settings -->
+    <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
+    <string name="lockscreen_qs_disabled_summary">Disable expanding quick settings on secure lock screens</string>
+
 </resources>
