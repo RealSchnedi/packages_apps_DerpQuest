@@ -20,12 +20,18 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/notifications_title">
 
-    <com.evolution.settings.preference.GlobalSettingSwitchPreference
+    <com.derp.support.preference.GlobalSettingSwitchPreference
         android:key="heads_up_notifications_enabled"
         android:title="@string/heads_up_notifications"
         android:summaryOn="@string/summary_heads_up_enabled"
         android:summaryOff="@string/summary_heads_up_disabled"
         android:defaultValue="true" />
+
+    <com.derp.support.preference.SystemSettingSwitchPreference
+        android:key="less_boring_heads_up"
+        android:title="@string/less_boring_heads_up_title"
+        android:summary="@string/less_boring_heads_up_summary"
+        android:defaultValue="false" />
 
     <PreferenceCategory
         android:title="@string/heads_up_stoplist_title"
