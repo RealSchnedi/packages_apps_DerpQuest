@@ -57,11 +57,11 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
     private static final String LAYOUT_SETTINGS = "navbar_layout_views";
     private static final String NAVIGATION_BAR_INVERSE = "navbar_inverse_layout";
-    private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
+    //private static final String PIXEL_NAV_ANIMATION = "pixel_nav_animation";
 
     private Preference mLayoutSettings;
     private SwitchPreference mSwapNavButtons;
-    private SystemSettingSwitchPreference mPixelNavAnimation;
+    //private SystemSettingSwitchPreference mPixelNavAnimation;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,12 +71,12 @@ public class NavigationSettings extends SettingsPreferenceFragment implements
 
         mLayoutSettings = findPreference(LAYOUT_SETTINGS);
         mSwapNavButtons = findPreference(NAVIGATION_BAR_INVERSE);
-        mPixelNavAnimation = findPreference(PIXEL_NAV_ANIMATION);
+        //mPixelNavAnimation = findPreference(PIXEL_NAV_ANIMATION);
 
         if (!derpUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             prefScreen.removePreference(mLayoutSettings);
             prefScreen.removePreference(mSwapNavButtons);
-            prefScreen.removePreference(mPixelNavAnimation);
+            //prefScreen.removePreference(mPixelNavAnimation);
         }
     }
 
