@@ -73,10 +73,6 @@
     <string name="qs_footer_text_show_title">Show QS footer text</string>
     <string name="qs_footer_text_string_title">Customize footer text</string>
 
-    <!-- Lockscreen battery info indicator  -->
-    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
-    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
-
     <!-- 4G LTE switch -->
     <string name="show_fourg_title">Show 4G instead of LTE</string>
     <string name="show_fourg_summary">Replaces LTE statusbar indicators with 4G</string>
@@ -728,5 +724,14 @@
 
     <!-- Lock screen media blur -->
     <string name="lockscreen_media_blur_title">Media artwork blur level</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_category">Battery</string>
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
+
+    <!-- Charging animation -->
+    <string name="lockscreen_charging_animation_title">Lockscreen charging animation</string>
+    <string name="lockscreen_charging_animation_summary">Display a fancy animation when the device is charging</string>
 
 </resources>
