@@ -747,4 +747,8 @@
     <string name="screenshot_type_fullscreen">Take fullscreen screenshots</string>
     <string name="screenshot_type_partial">Drag selection on the area you want to take as a screenshot</string>
 
+    <!-- Volume panel on left switch -->
+    <string name="volume_panel_on_left_title">Volume panel on left</string>
+    <string name="volume_panel_on_left_summary">Show volume panel on the left side</string>
+
 </resources>
