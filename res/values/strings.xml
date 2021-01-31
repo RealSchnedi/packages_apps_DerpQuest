@@ -751,4 +751,8 @@
     <string name="volume_panel_on_left_title">Volume panel on left</string>
     <string name="volume_panel_on_left_summary">Show volume panel on the left side</string>
 
+    <!-- Fingerprint error vibration -->
+    <string name="fprint_error_vib_title">Fingerprint error vibration</string>
+    <string name="fprint_error_vib_summary">Vibrate on error fingerprint authentication</string>
+
 </resources>

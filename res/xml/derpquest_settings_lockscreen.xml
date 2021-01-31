@@ -69,6 +69,12 @@
             android:summary="@string/fprint_sucess_vib_summary"
             android:persistent="false" />
 
+        <SwitchPreference
+            android:key="fingerprint_error_vib"
+            android:title="@string/fprint_error_vib_title"
+            android:summary="@string/fprint_error_vib_summary"
+            android:persistent="false" />
+
         <com.derp.support.preference.SystemSettingSwitchPreference
             android:key="fod_night_light"
             android:title="@string/fod_night_light_title"
