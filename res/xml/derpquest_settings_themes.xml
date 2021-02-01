@@ -64,14 +64,13 @@
             android:title="@string/custom_header_title"
             android:summary="@string/custom_header_summary" />
 
-        <com.derp.support.preference.SystemSettingListPreference
+        <ListPreference
             android:key="qs_tile_style"
             android:title="@string/qs_tile_style_title"
-            android:dialogTitle="@string/qs_tile_style_pick"
-            android:entries="@array/qs_tile_style_entries"
-            android:entryValues="@array/qs_tile_style_values"
-            android:summary="%s"
-            android:defaultValue="0" />
+            android:persistent="false"
+            android:entries="@array/qs_selector_entries"
+            android:entryValues="@array/qs_selector_values"
+            android:summary="%s" />
 
         <com.derp.support.preference.SystemSettingSwitchPreference
             android:key="qs_panel_bg_use_new_tint"
