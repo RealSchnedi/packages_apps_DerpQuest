@@ -328,9 +328,6 @@
     <!-- Clock style -->
     <string name="clock_style_title">Clock style</string>
     <string name="clock_style_summary">Customize lockscreen clock</string>
-    <string name="theme_customization_style_android_title">Android</string>
-    <string name="theme_customization_style_settings_title">Settings</string>
-    <string name="theme_customization_style_systemui_title">SystemUI</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize accent color. -->
     <string name="theme_customization_accent_color_title">Accent color</string>
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->

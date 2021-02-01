@@ -77,12 +77,6 @@ public class ThemeSettings extends DashboardFragment {
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.accent_color"));
         controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.style.android"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.style.settings"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.style.systemui"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.font"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.adaptive_icon_shape"));

@@ -39,15 +39,6 @@
         android:key="android.theme.customization.accent_color"
         android:title="@string/theme_customization_accent_color_title"/>
     <ListPreference
-        android:key="android.theme.customization.style.android"
-        android:title="@string/theme_customization_style_android_title"/>
-    <ListPreference
-        android:key="android.theme.customization.style.settings"
-        android:title="@string/theme_customization_style_settings_title"/>
-    <ListPreference
-        android:key="android.theme.customization.style.systemui"
-        android:title="@string/theme_customization_style_systemui_title"/>
-    <ListPreference
         android:key="android.theme.customization.font"
         android:title="@string/theme_customization_font_title"/>
     <ListPreference
