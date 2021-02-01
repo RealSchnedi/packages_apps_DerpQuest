@@ -752,4 +752,8 @@
     <string name="fprint_error_vib_title">Fingerprint error vibration</string>
     <string name="fprint_error_vib_summary">Vibrate on error fingerprint authentication</string>
 
+    <!-- Show old style mobile data icon -->
+    <string name="use_old_mobiletype_title">Use old style mobile data icons</string>
+    <string name="use_old_mobiletype_summary">Use pre-p mobiletype icons for signal</string>
+
 </resources>
