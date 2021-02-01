@@ -21,6 +21,12 @@
     android:title="@string/misc_title">
 
     <Preference
+        android:key="charging_light"
+        android:title="@string/battery_light_settings"
+        android:summary="@string/battery_light_summary"
+        android:fragment="com.derpquest.settings.fragments.BatteryLightSettings" />
+
+    <Preference
         android:key="pulse_category"
         android:title="@string/pulse_settings"
         android:summary="@string/pulse_settings_summary"

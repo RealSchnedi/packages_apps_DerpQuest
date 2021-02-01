@@ -28,7 +28,7 @@
     <string name="lockscreen_title">Lock screen</string>
     <string name="lockscreen_summary">Fingerprint animation, charging info</string>
     <string name="misc_title">Miscellaneous</string>
-    <string name="misc_summary">Gaming mode, charging animation</string>
+    <string name="misc_summary">Pulse, usb configuration</string>
     <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">System gestures, navigation bar</string>
     <string name="notifications_title">Notifications</string>

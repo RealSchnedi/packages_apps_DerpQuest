@@ -50,10 +50,23 @@ import java.util.List;
 public class MiscellaneousSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_CHARGING_LIGHT = "charging_light";
+
+    private Preference mChargingLeds;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_miscellaneous);
+        PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mChargingLeds = findPreference(KEY_CHARGING_LIGHT);
+        if (mChargingLeds != null
+                && !getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
+            prefScreen.removePreference(mChargingLeds);
+        }
+
     }
 
     @Override
