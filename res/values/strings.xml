@@ -109,14 +109,6 @@
     <string name="vowifi_icon_simple2">Simple2 Icon</string>
     <string name="vowifi_icon_simple3">Simple3 Icon</string>
 
-    <!-- Statusbar net monitor -->
-    <string name="net_monitor_category_title">Network monitor</string>
-    <string name="network_traffic_state_title">Enable network monitor</string>
-    <string name="network_traffic_state_sb_title">Always show net monitor</string>
-    <string name="network_traffic_state_summary">Show net download activity, or upload if bigger, in expanded statusbar</string>
-    <string name="network_traffic_state_sb_summary">Keep showing net activity also in normal statusbar</string>
-    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-
     <!-- SmartSpace -->
     <string name="smart_space_title">Google Smart space</string>
     <string name="smart_space_summary">Display conditional info such as weather and events on lockscreen\nRequires a SystemUI restart</string>
