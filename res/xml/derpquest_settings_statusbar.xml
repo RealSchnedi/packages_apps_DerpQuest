@@ -28,6 +28,12 @@
     </Preference>
 
     <Preference
+        android:key="traffic"
+        android:title="@string/traffic_title"
+        android:summary="@string/traffic_summary"
+        android:fragment="com.derpquest.settings.fragments.NetworkTrafficSettings" />
+
+    <Preference
         android:key="statusbar_battery"
         android:title="@string/battery_percent_title"
         android:summary="@string/battery_percent_summary"
