@@ -33,6 +33,12 @@
         android:fragment="com.derpquest.settings.fragments.PulseSettings" />
 
     <Preference
+        android:key="gaming_mode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary"
+        android:fragment="com.derpquest.settings.fragments.GamingMode" />
+
+    <Preference
         android:key="default_usb_configuration"
         android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
         android:title="@string/usb_default_config_title"
