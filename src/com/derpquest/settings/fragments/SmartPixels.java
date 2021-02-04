@@ -16,80 +16,86 @@
 
 package com.derpquest.settings.fragments;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.os.UserHandle;
+import android.os.PowerManager;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
-import androidx.preference.ListPreference;
 import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
+
+import com.derp.support.preference.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SearchIndexable(forTarget = SearchIndexable.ALL & ~SearchIndexable.ARC)
-public class MiscellaneousSettings extends SettingsPreferenceFragment implements
+public class SmartPixels extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+    private static final String TAG = "SmartPixels";
 
-    private static final String KEY_CHARGING_LIGHT = "charging_light";
-    private static final String SMART_PIXELS = "smart_pixels";
+    private static final String ON_POWER_SAVE = "smart_pixels_on_power_save";
 
-    private Preference mChargingLeds;
+    private SystemSettingSwitchPreference mSmartPixelsOnPowerSave;
+
+    ContentResolver resolver;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.derpquest_settings_miscellaneous);
-        PreferenceScreen prefScreen = getPreferenceScreen();
-        updateSmartPixelsPreference();
 
-        mChargingLeds = findPreference(KEY_CHARGING_LIGHT);
-        if (mChargingLeds != null
-                && !getResources().getBoolean(
-                        com.android.internal.R.bool.config_intrusiveBatteryLed)) {
-            prefScreen.removePreference(mChargingLeds);
-        }
+        addPreferencesFromResource(R.xml.derpquest_settings_smart_pixels);
 
-    }
+        resolver = getActivity().getContentResolver();
 
-    private void updateSmartPixelsPreference() {
-        PreferenceScreen prefSet = getPreferenceScreen();
-        boolean enableSmartPixels = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
-        Preference smartPixels = findPreference(SMART_PIXELS);
+        mSmartPixelsOnPowerSave = (SystemSettingSwitchPreference) findPreference(ON_POWER_SAVE);
 
-        if (!enableSmartPixels){
-            prefSet.removePreference(smartPixels);
-        }
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        updateDependency();
     }
 
     @Override
     public int getMetricsCategory() {
         return MetricsEvent.DERP;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        final String key = preference.getKey();
+        updateDependency();
+        return true;
+    }
+
+    private void updateDependency() {
+        boolean mUseOnPowerSave = (Settings.System.getIntForUser(
+                resolver, Settings.System.SMART_PIXELS_ON_POWER_SAVE,
+                0, UserHandle.USER_CURRENT) == 1);
+        PowerManager pm = (PowerManager)getActivity().getSystemService(Context.POWER_SERVICE);
+        if (pm.isPowerSaveMode() && mUseOnPowerSave) {
+            mSmartPixelsOnPowerSave.setEnabled(false);
+        } else {
+            mSmartPixelsOnPowerSave.setEnabled(true);
+        }
     }
 
     /**
@@ -105,8 +111,10 @@ public class MiscellaneousSettings extends SettingsPreferenceFragment implements
                     ArrayList<SearchIndexableResource> result =
                             new ArrayList<SearchIndexableResource>();
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.derpquest_settings_miscellaneous;
-                    result.add(sir);
+                    if (context.getResources().
+                            getBoolean(com.android.internal.R.bool.config_enableSmartPixels)) {
+                        sir.xmlResId = R.xml.derpquest_settings_smart_pixels;
+                    }
                     return result;
                 }
 
@@ -115,5 +123,5 @@ public class MiscellaneousSettings extends SettingsPreferenceFragment implements
                     List<String> keys = super.getNonIndexableKeys(context);
                     return keys;
                 }
-    };
+            };
 }
