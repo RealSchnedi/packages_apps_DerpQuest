@@ -22,7 +22,6 @@ import android.content.ContentResolver;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.UserHandle;
-import android.provider.SearchIndexableResource;
 import android.provider.Settings;
 
 import androidx.preference.ListPreference;
@@ -36,7 +35,6 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settingslib.search.SearchIndexable;
 
 import com.derp.support.colorpicker.ColorPickerSecurePreference;
 
@@ -44,7 +42,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@SearchIndexable
 public class PulseSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = PulseSettings.class.getSimpleName();
@@ -225,21 +222,9 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.DERP;
     }
 
+    /**
+     * For Search
+     */
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider() {
-
-                @Override
-                public List<SearchIndexableResource> getXmlResourcesToIndex(
-                        Context context, boolean enabled) {
-                    final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.derpquest_settings_pulse;
-                    return Arrays.asList(sir);
-                }
-
-                @Override
-                public List<String> getNonIndexableKeys(Context context) {
-                    ArrayList<String> result = new ArrayList<String>();
-                    return result;
-                }
-            };
+            new BaseSearchIndexProvider(R.xml.derpquest_settings_pulse);
 }
