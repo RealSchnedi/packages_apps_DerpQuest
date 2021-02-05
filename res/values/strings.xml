@@ -391,17 +391,12 @@
     <string name="pulse_empty_block_size">Block spacing</string>
 
     <!-- Quick Settings brightness slider -->
-    <string name="qs_show_brightness_title">Brightness slider</string>
-    <string name="qs_show_brightness_summary">Show a brightness slider in the quick settings panel</string>
-
-    <!-- Quick Settings brightness slider -->
-    <string name="qs_show_brightness_slider_title">Brightness slider</string>
-    <string name="qs_show_brightness_slider_summary">Show a brightness slider in the quick settings panel</string>
+    <string name="qs_show_brightness_slider_title">Quick QS brightness slider</string>
+    <string name="qs_show_brightness_slider_summary">Show brightness slider in quickbar</string>
+    <string name="qs_show_brightness_slider_expanded_title">Expanded QS brightness slider</string>
+    <string name="qs_show_brightness_slider_expanded_summary">Show brightness slider when expanded</string>
     <string name="qs_show_auto_brightness_title">Autobrightness icon</string>
     <string name="qs_show_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
-    <string name="qs_show_brightness_slider_show_never">Never show</string>
-    <string name="qs_show_brightness_slider_show_expanded">Show when expanded</string>
-    <string name="qs_show_brightness_slider_show_always">Show always</string>
 
     <!-- QS tiles -->
     <string name="qs_tiles_category">Tiles</string>
