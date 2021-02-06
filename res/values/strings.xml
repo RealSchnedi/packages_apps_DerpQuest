@@ -144,7 +144,7 @@
     <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
 
     <!-- QS rows and columns -->
-    <string name="qs_columns_rows_category_title">QS columns and rows</string>
+    <string name="qs_columns_rows_category_title">Columns and rows</string>
     <string name="qs_rows_columns_title">QS rows and columns</string>
     <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
     <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
@@ -155,7 +155,7 @@
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
 
     <!-- Battery Styles -->
-    <string name="battery_percent_title">Statusbar battery indicator</string>
+    <string name="battery_percent_title">Battery indicator</string>
     <string name="battery_percent_summary">Configure icon and text styles for the statusbar battery indicator</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
@@ -391,6 +391,7 @@
     <string name="pulse_empty_block_size">Block spacing</string>
 
     <!-- Quick Settings brightness slider -->
+    <string name="brightness_slider_category">Brightness slider</string>
     <string name="qs_show_brightness_slider_title">Quick QS brightness slider</string>
     <string name="qs_show_brightness_slider_summary">Show brightness slider in quickbar</string>
     <string name="qs_show_brightness_slider_expanded_title">Expanded QS brightness slider</string>
@@ -527,7 +528,7 @@
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
 
     <!-- Double Tap on Doze to wake -->
-    <string name="dtt_category_title">Double tap gestures</string>
+    <string name="dtt_category_title">Double tap</string>
     <string name="double_tap_on_doze_to_wake_title">Double-tap to wake on doze</string>
     <string name="double_tap_on_doze_to_wake_summary">Double tap to wake when device is dreaming</string>
 
