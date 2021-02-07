@@ -46,10 +46,10 @@
         android:fragment="com.derpquest.settings.fragments.StatusbarClockSettings" />
 
     <Preference
-        android:key="battery_bar_settings"
+        android:key="battery_bar_category"
         android:title="@string/battery_bar_title"
-        android:summary="@string/battery_bar_summary" 
-        android:fragment="com.derpquest.settings.fragments.BatteryBarSettings"/>
+        android:summary="@string/battery_bar_summary"
+        android:fragment="com.derpquest.settings.fragments.BatteryBarSettings" />
 
     <com.derp.support.preference.SystemSettingSwitchPreference
         android:key="use_old_mobiletype"
