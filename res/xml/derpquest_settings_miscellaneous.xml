@@ -45,6 +45,12 @@
         android:fragment="com.derpquest.settings.fragments.SmartPixels" />
 
     <Preference
+        android:key="sensor_block_settings"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:fragment="com.derpquest.settings.fragments.SensorBlockSettings"/>
+
+    <Preference
         android:key="default_usb_configuration"
         android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
         android:title="@string/usb_default_config_title"
