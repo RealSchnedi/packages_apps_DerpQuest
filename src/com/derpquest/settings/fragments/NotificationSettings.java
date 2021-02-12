@@ -146,7 +146,6 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
                 Settings.System.putInt(resolver,
                         Settings.System.NOTIFICATION_HEADERS, value ? 1 : 0);
-                Utils.showSystemUiRestartDialog(getContext());
             return true;
         } else if (preference == mEdgeLightColorPreference) {
             String hex = ColorPickerPreference.convertToARGB(

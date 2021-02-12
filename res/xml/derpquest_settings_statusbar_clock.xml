@@ -20,9 +20,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/status_bar_clock_date_title">
 
-    <PreferenceCategory
-        android:title="@string/status_bar_clock_title">
-
         <com.derp.support.preference.SystemSettingSwitchPreference
             android:key="statusbar_clock"
             android:title="@string/status_bar_clock_show"
@@ -49,8 +46,6 @@
             android:title="@string/clock_seconds_display"
             android:dependency="statusbar_clock"
             android:defaultValue="false" />
-
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/status_bar_date_title">

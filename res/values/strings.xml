@@ -411,8 +411,8 @@
 
     <!-- Fingerprint authentication vibration -->
     <string name="lockscreen_fingerprint_category">FOD</string>
-    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
-    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_success_vib_title">Fingerprint authentication vibration</string>
+    <string name="fprint_success_vib_summary">Vibrate on successful fingerprint authentication</string>
 
     <!-- Lock icon -->
     <string name="hide_lockicon_title">Hide lock icon</string>
