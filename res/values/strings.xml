@@ -832,4 +832,7 @@
     <string name="navigation_bar_arrow_keys_title">IME arrows</string>
     <string name="navigation_bar_arrow_keys_summary">Show arrow keys on navbar while typing</string>
 
+    <!-- AOSP Gestures -->
+    <string name="aosp_gesture_title">AOSP Gestures</string>
+
 </resources>
