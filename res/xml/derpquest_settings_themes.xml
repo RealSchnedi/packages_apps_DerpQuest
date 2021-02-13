@@ -98,7 +98,7 @@
             android:title="@string/qs_panel_alpha_title"
             android:defaultValue="255"
             android:max="255"
-            android:min="0"
+            settings:min="0"
             settings:units="" />
 
         <com.derp.support.preference.CustomSystemSeekBarPreference
@@ -106,7 +106,7 @@
             android:title="@string/qs_sb_bg_alpha_title"
             android:defaultValue="255"
             android:max="255"
-            android:min="0"
+            settings:min="0"
             settings:units="" />
 
         <com.derp.support.preference.SystemSettingSwitchPreference

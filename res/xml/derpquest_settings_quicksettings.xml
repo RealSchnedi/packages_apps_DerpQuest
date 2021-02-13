@@ -108,7 +108,7 @@
             android:key="qs_rows_portrait"
             android:title="@string/qs_rows_portrait_title"
             android:max="5"
-            android:min="1"
+            settings:min="1"
             android:defaultValue="3"
             settings:units="" />
 
@@ -116,7 +116,7 @@
             android:key="qs_rows_landscape"
             android:title="@string/qs_rows_landscape_title"
             android:max="5"
-            android:min="1"
+            settings:min="1"
             android:defaultValue="1"
             settings:units="" />
 
@@ -124,7 +124,7 @@
             android:key="qs_columns_portrait"
             android:title="@string/qs_columns_portrait_title"
             android:max="7"
-            android:min="1"
+            settings:min="1"
             android:defaultValue="4"
             settings:units="" />
 
@@ -132,7 +132,7 @@
             android:key="qs_columns_landscape"
             android:title="@string/qs_columns_landscape_title"
             android:max="9"
-            android:min="1"
+            settings:min="1"
             android:defaultValue="4"
             settings:units="" />
 
