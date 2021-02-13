@@ -835,4 +835,9 @@
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_title">AOSP Gestures</string>
 
+    <!-- QS Media player -->
+    <string name="qs_media_player_title">QS Media player</string>
+    <string name="qs_media_player_summary_on">Show media player in QS.\nRequires a SystemUI restart</string>
+    <string name="qs_media_player_summary_off">Show media player as a notification.\nRequires a SystemUI restart</string>
+
 </resources>
