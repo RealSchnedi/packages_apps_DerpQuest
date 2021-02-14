@@ -53,12 +53,17 @@
         android:key="dtt_category"
         android:title="@string/dtt_category_title">
 
-        <Preference
-            android:key="gesture_doubletap_lockscreen"
-            android:title="@string/doubletap_lockscreen_screen_title"
-            android:summary="@string/doubletap_lockscreen_summary"
-            android:fragment="com.android.settings.gestures.DoubleTapLockscreenSettings"
-            settings:controller="com.android.settings.gestures.DoubleTapLockscreenPreferenceController" />
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:summary="@string/double_tap_sleep_gesture_summary"
+            android:defaultValue="false" />
+
+        <com.derp.support.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_sleep_lockscreen_title"
+            android:summary="@string/double_tap_sleep_lockscreen_summary"
+            android:defaultValue="false" />
 
         <com.derp.support.preference.SecureSettingSwitchPreference
             android:key="doze_pulse_on_double_tap"
