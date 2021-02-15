@@ -143,17 +143,6 @@
     <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
     <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
 
-    <!-- QS rows and columns -->
-    <string name="qs_columns_rows_category_title">Columns and rows</string>
-    <string name="qs_rows_columns_title">QS rows and columns</string>
-    <string name="qs_rows_portrait_title">Tiles rows on portrait</string>
-    <string name="qs_rows_landscape_title">Tiles rows on landscape</string>
-    <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
-    <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
-
-    <!-- QS titlw title -->
-    <string name="qs_tile_title_visibility_title">Show tiles title</string>
-
     <!-- Battery Styles -->
     <string name="battery_percent_title">Battery indicator</string>
     <string name="battery_percent_summary">Configure icon and text styles for the statusbar battery indicator</string>
