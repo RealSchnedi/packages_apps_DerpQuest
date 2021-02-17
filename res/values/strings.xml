@@ -781,4 +781,8 @@
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
+    <!-- GVM -->
+    <string name="theme_customization_statusbar_height_title">Statusbar height</string>
+    <string name="theme_customization_ui_radius_title">UI radius</string>
+
 </resources>
