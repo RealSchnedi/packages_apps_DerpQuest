@@ -131,9 +131,6 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
 
-    <!-- Navbar tuner -->
-    <string name="navbar_tuner_title">Navbar buttons</string>
-
     <!-- Navbar options -->
     <string name="navbar_invert_layout_title">Invert layout</string>
 
@@ -195,7 +192,7 @@
 
     <!-- Ambient edge lighting -->
     <string name="pulse_ambient_light_category">Screen edge lighting</string>
-    <string name="pulse_ambient_light_title">Show on new notification</string>
+    <string name="pulse_ambient_light_title">Screen edge lighting</string>
     <string name="pulse_ambient_light_summary">Show light pulse on new notification</string>
     <string name="pulse_ambient_light_show_always_title">Show for all doze events</string>
     <string name="pulse_ambient_light_show_always_summary">Show lights for all doze events and not just notifications</string>
@@ -619,7 +616,7 @@
     <string name="global_actions_screenrecord_summary">Add Screen Record toggle to Power Menu</string>
 
     <!-- Quick Settings -->
-    <string name="lockscreen_qs_disabled_title">Disable quick settings when locked</string>
+    <string name="lockscreen_qs_disabled_title">Disable when locked</string>
     <string name="lockscreen_qs_disabled_summary">Disable expanding quick settings on secure lock screens</string>
 
     <!-- Notification Vibration -->
@@ -631,7 +628,7 @@
 
     <!-- Lockscreen battery info indicator  -->
     <string name="lockscreen_battery_category">Battery</string>
-    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_title">Battery charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
 
     <!-- Charging animation -->
@@ -685,7 +682,7 @@
     <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
 
     <!-- QS DataUsage Toggle -->
-    <string name="qs_datausage_title">Data usage in QS Header</string>
+    <string name="qs_datausage_title">Data usage in QS panel</string>
     <string name="qs_datausage_disabled">Disabled</string>
     <string name="qs_datausage_daily">Daily usage</string>
     <string name="qs_datausage_monthly">Monthly usage</string>
