@@ -80,8 +80,8 @@ public class ThemeSettings extends DashboardFragment {
                 "android.theme.customization.adaptive_icon_shape"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.statusbar_height"));
+        /*controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.statusbar_height"));*/
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.ui_radius"));
         controllers.add(new QsTileStylePreferenceController(context));
