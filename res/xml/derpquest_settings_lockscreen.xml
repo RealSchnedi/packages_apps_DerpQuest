@@ -29,6 +29,11 @@
                 android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
     </Preference>
 
+    <Preference
+        android:key="always_on_display_schedule"
+        android:title="@string/always_on_display_schedule_title"
+        android:fragment="com.derpquest.settings.fragments.AODSchedule" />
+
     <com.derp.support.preference.SystemSettingSwitchPreference
         android:key="smart_space"
         android:title="@string/smart_space_title"
