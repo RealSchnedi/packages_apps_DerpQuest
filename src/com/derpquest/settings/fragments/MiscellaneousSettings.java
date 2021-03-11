@@ -48,7 +48,6 @@ public class MiscellaneousSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_CHARGING_LIGHT = "charging_light";
-    private static final String SMART_PIXELS = "smart_pixels";
 
     private Preference mChargingLeds;
 
@@ -57,7 +56,6 @@ public class MiscellaneousSettings extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.derpquest_settings_miscellaneous);
         PreferenceScreen prefScreen = getPreferenceScreen();
-        updateSmartPixelsPreference();
 
         mChargingLeds = findPreference(KEY_CHARGING_LIGHT);
         if (mChargingLeds != null
@@ -66,17 +64,6 @@ public class MiscellaneousSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(mChargingLeds);
         }
 
-    }
-
-    private void updateSmartPixelsPreference() {
-        PreferenceScreen prefSet = getPreferenceScreen();
-        boolean enableSmartPixels = getContext().getResources().
-                getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
-        Preference smartPixels = findPreference(SMART_PIXELS);
-
-        if (!enableSmartPixels){
-            prefSet.removePreference(smartPixels);
-        }
     }
 
     @Override
